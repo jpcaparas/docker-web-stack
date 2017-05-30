@@ -1,8 +1,6 @@
 # Docker Web Stack
 
----
-
-## What's inside
+# What's inside
 
 A `docker-compose`-powered stack to get your PHP web app project running.
 
@@ -11,16 +9,12 @@ A `docker-compose`-powered stack to get your PHP web app project running.
 - MariaDB
 - Node w/ Yarn
 
----
-
-## Requirements
+# Requirements
 
 - `Docker` v17.03.1-ce or higher
 - `docker-compose` v1.11.2 or higher
 
----
-
-## How-to (simple)
+# How-to (simple)
 
 To start the stack, run:
 
@@ -30,11 +24,9 @@ To start the stack, run:
 - The `--build` builds services (e.g. `php-fpm`, `nginx`) that comprise the stack.
 - The `--remove-orphans` stack ensures that services that aren't being used are deleted (to save disk space).
 
----
+# How-to (advanced)
 
-## How-to (advanced)
-
-### Re-building a service
+## Re-building a service
 
 If you want to extend the functionality of a service (e.g. php-fpm), you have to re-build it.
 
@@ -44,8 +36,6 @@ To accomplish this, modify the Dockerfile, then run:
 
 ... followed by a `docker-compose up [arguments...]`
 
----
-
-## Warranties
+# Warranties
 
 - This stack was built on `macOS Sierra` v10.12.5. Experience may very on other operating systems.
