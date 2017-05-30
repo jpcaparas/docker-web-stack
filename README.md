@@ -27,6 +27,8 @@ To start the stack, run:
 - The `--build` builds services (e.g. `php-fpm`, `nginx`) that comprise the stack.
 - The `--remove-orphans` stack ensures that services that aren't being used are deleted (to save disk space).
 
+Provided that no errors were emitted during the start, you should be able to visit your browser on `http://localhost:8080`.
+
 ---
 
 To stop the stack, run:
