@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  workspace:
+    image: busybox:latest
+    volumes:
+      - ./:/var/www
+  php-fpm:
+    build:
+      context: ./services/php
+    ports:
+      - 9000
+    volumes_from:
+      - workspace
+    restart: always
+volumes:
+  php-fpm:
+    driver: "local"
