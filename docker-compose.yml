@@ -5,6 +5,7 @@ services:
     image: busybox:latest
     volumes:
       - ./:/var/www
+      - ./mariadb:/var/lib/mysql:rw
   php-fpm:
     build:
       context: ./services/php
@@ -18,11 +19,26 @@ services:
       context: ./services/composer
     volumes:
       - ./:/app
+  mariadb:
+    build:
+      context: ./services/mariadb
+    ports:
+      - 3306:3306
+    volumes_from:
+      - workspace
+    environment:
+      - "MYSQL_DATABASE=app"
+      - "MYSQL_USER=app"
+      - "MYSQL_PASSWORD=secret"
+      - "MYSQL_ROOT_PASSWORD=secret"
   node:
     build:
       context: ./services/node
     volumes_from:
       - workspace
+
 volumes:
   php-fpm:
+    driver: "local"
+  mariadb:
     driver: "local"

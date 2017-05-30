@@ -130,4 +130,5 @@ typings/
 # dotenv environment variables file
 .env
 
-
+### MariaDB
+/mariadb

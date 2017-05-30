@@ -35,11 +35,21 @@ To stop the stack, run:
 
 ---
 
+To connect to the MariaDB service, run:
+
+        docker-compose exec mariadb mysql -uapp -p
+
+- This command uses the `app` user. There is also a `root` user.
+- Use the password defined on the `docker-compose.yml` file.
+
+---
+
 To install composer dependencies, run:
 
         docker-compose run --rm composer install
 
 - The `--rm` flag ensures that that intermediate (temporary) containers are deleted once you install packages (to save disk space).
+- The service's data is mounted on the `./mariadb` host folder, which means that data will persist between `docker-compose` `up`s and `stop`s.
 
 ---
 
