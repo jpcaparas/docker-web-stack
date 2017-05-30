@@ -1,5 +1,9 @@
 # Docker Web Stack
 
+# Overview
+
+Docker Compose makes it easy to interconnect various Docker images. What better way to showcase its features than by
+creating (yet another) LEMP stack. This is one is much more bleeding edge than others, though :wink:.
 
 # What's inside
 
@@ -34,6 +38,12 @@ Provided that no errors were emitted during the start, you should be able to vis
 To stop the stack, run:
 
         docker-compose stop
+
+To ensure that all services have stopped, run:
+
+        docker-compose ps
+
+There should be no more services running.
 
 ---
 
@@ -75,6 +85,19 @@ To accomplish this, modify the Dockerfile, then run:
 ... followed by a `docker-compose up [arguments...]`
 
 
+## Gotchas
+
+- Ensure that ports `8080` and `3306` are open on your host machine.
+
+
 # Warranties
 
 - This stack was built on `macOS Sierra` v10.12.5. Experience may vary on other operating systems.
+
+
+# Attributions
+
+- This wouldn't be possible without being granted a role as Software Developer at [Pixel Fusion](https://pixelfusion.co.nz/),
+an award-winning product development company at Parnell, Auckland.
+- This project was greatly inspired by the [Laradock project](https://github.com/laradock/laradock).
+
