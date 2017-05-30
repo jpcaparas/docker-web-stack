@@ -24,6 +24,13 @@ To start the stack, run:
 - The `--build` builds services (e.g. `php-fpm`, `nginx`) that comprise the stack.
 - The `--remove-orphans` stack ensures that services that aren't being used are deleted (to save disk space).
 
+---
+
+To stop the stack, run:
+
+        docker-compose stop
+
+
 # How-to (advanced)
 
 ## Re-building a service
