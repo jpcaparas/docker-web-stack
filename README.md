@@ -57,4 +57,4 @@ To accomplish this, modify the Dockerfile, then run:
 
 # Warranties
 
-- This stack was built on `macOS Sierra` v10.12.5. Experience may very on other operating systems.
+- This stack was built on `macOS Sierra` v10.12.5. Experience may vary on other operating systems.
