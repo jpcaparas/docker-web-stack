@@ -13,6 +13,11 @@ services:
     volumes_from:
       - workspace
     restart: always
+  composer:
+    build:
+      context: ./services/composer
+    volumes:
+      - ./:/app
 volumes:
   php-fpm:
     driver: "local"

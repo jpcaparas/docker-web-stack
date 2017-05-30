@@ -1,18 +1,21 @@
 # Docker Web Stack
 
+
 # What's inside
 
-A `docker-compose`-powered stack to get your PHP web app project running.
+A `docker-compose`-powered stack to get your PHP project running in no time.
 
 - PHP-FPM 7.1
 - nginx
 - MariaDB
 - Node w/ Yarn
 
+
 # Requirements
 
 - `Docker` v17.03.1-ce or higher
 - `docker-compose` v1.11.2 or higher
+
 
 # How-to (simple)
 
@@ -30,6 +33,12 @@ To stop the stack, run:
 
         docker-compose stop
 
+---
+
+To install composer dependencies, run:
+
+        docker-compose run --rm composer install
+
 
 # How-to (advanced)
 
@@ -42,6 +51,7 @@ To accomplish this, modify the Dockerfile, then run:
         docker-compose build --no-cache --force-rm [name-of-service]
 
 ... followed by a `docker-compose up [arguments...]`
+
 
 # Warranties
 

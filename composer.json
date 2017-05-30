@@ -1,0 +1,14 @@
+{
+    "name": "jpcaparas/docker-webapp",
+    "description": "A docker-compose-powered stack to get your PHP project running in no time.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JP Caparas",
+            "email": "jp@jpcaparas.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
