@@ -41,6 +41,14 @@ To install composer dependencies, run:
 
 - The `--rm` flag ensures that that intermediate (temporary) containers are deleted once you install packages (to save disk space).
 
+---
+
+To install npm packages, run:
+
+        docker-compose run --rm yarn add [name-of-package]
+
+- `yarn` is faster than `npm` and contains a lockfile (`yarn.lock`), for deterministic dependency resolution.
+
 
 # How-to (advanced)
 
