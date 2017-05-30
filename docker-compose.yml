@@ -18,6 +18,11 @@ services:
       context: ./services/composer
     volumes:
       - ./:/app
+  node:
+    build:
+      context: ./services/node
+    volumes_from:
+      - workspace
 volumes:
   php-fpm:
     driver: "local"

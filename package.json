@@ -1,0 +1,10 @@
+{
+  "name": "docker-webapp",
+  "version": "0.0.1",
+  "main": "public/index.php",
+  "repository": "git@github.com:jpcaparas/docker-webapp.git",
+  "license": "MIT",
+  "dependencies": {
+    "whatwg-fetch": "^2.0.3"
+  }
+}
