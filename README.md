@@ -39,6 +39,8 @@ To install composer dependencies, run:
 
         docker-compose run --rm composer install
 
+- The `--rm` flag ensures that that intermediate (temporary) containers are deleted once you install packages (to save disk space).
+
 
 # How-to (advanced)
 
