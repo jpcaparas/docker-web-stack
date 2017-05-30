@@ -44,7 +44,7 @@ VOLUME ["/var/www"]
 # starting point
 WORKDIR /var/www
 
-# make web server listen to this port
+# make web server connect to this port
 EXPOSE 9000
 
 CMD ["php-fpm"]
