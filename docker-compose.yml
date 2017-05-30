@@ -6,6 +6,8 @@ services:
     volumes:
       - ./:/var/www
       - ./mariadb:/var/lib/mysql:rw
+      - ./services/nginx/logs:/var/log/nginx
+      - ./services/nginx/sites:/etc/nginx/conf.d
   php-fpm:
     build:
       context: ./services/php
@@ -19,6 +21,16 @@ services:
       context: ./services/composer
     volumes:
       - ./:/app
+  nginx:
+    build:
+      context: ./services/nginx
+    volumes_from:
+      - workspace
+    ports:
+      - 8080:80
+    depends_on:
+      - php-fpm
+    restart: always
   mariadb:
     build:
       context: ./services/mariadb
@@ -39,6 +51,8 @@ services:
 
 volumes:
   php-fpm:
+    driver: "local"
+  nginx:
     driver: "local"
   mariadb:
     driver: "local"
