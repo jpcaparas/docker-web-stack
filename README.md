@@ -76,8 +76,6 @@ To install npm packages, run:
 
 # How-to (advanced)
 
-## Re-building a service
-
 If you want to extend the functionality of a service (e.g. php-fpm), you have to re-build it.
 
 To accomplish this, modify the Dockerfile, then run:
@@ -86,10 +84,15 @@ To accomplish this, modify the Dockerfile, then run:
 
 ... followed by a `docker-compose up [arguments...]`
 
+---
+
+If you want to use a different web server port (e.g. 80), modify the port on the `docker-compose.yml` file
+and start the stack again.
+
 
 ## Gotchas
 
-- Ensure that ports `8080` and `3306` are open on your host machine.
+- Ensure that the host machine ports `8080` (web server) and `3306` (database) are open on your host machine.
 
 
 # Warranties
