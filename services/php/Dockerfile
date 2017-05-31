@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
 			libxml2-dev \
 			libssl-dev \
 			libpq-dev \
-			libbz2-dev
+			libbz2-dev \
+			libpng-dev
 
 # extensions
 RUN docker-php-ext-install opcache && \
@@ -15,6 +16,7 @@ RUN docker-php-ext-install opcache && \
     docker-php-ext-install iconv && \
     docker-php-ext-install calendar && \
     docker-php-ext-install dom && \
+    docker-php-ext-install gd && \
     docker-php-ext-install mbstring && \
     docker-php-ext-install mcrypt && \
     docker-php-ext-install mysqli && \
