@@ -1,6 +1,6 @@
 # Docker Web Stack
 
-[![Build Status](https://travis-ci.org/jpcaparas/docker-webapp.svg?branch=master)](https://travis-ci.org/jpcaparas/docker-webapp)
+[![Build Status](https://travis-ci.org/jpcaparas/docker-web-stack.svg?branch=master)](https://travis-ci.org/jpcaparas/docker-webapp)
 
 # Overview
 
