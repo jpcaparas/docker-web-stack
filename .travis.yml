@@ -1,0 +1,33 @@
+sudo: required
+
+language: generic
+
+dist: trusty
+
+os: linux
+
+services:
+  - docker
+
+before_install:
+  # update packages
+  - sudo apt-get update
+
+  # emit docker version
+  - docker-compose --version
+
+  # emit config
+  - docker-compose config
+
+  # build and start services
+  - docker-compose build --force-rm --no-cache
+
+  # list running containers
+  - docker-compose ps
+
+script:
+  # install composer packages
+  - docker-compose run -T --rm composer install
+
+  # install npm modules
+  - docker-compose run -T --rm node yarn install
