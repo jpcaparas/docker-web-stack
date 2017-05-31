@@ -1,6 +1,10 @@
-# Reference: https://docs.travis-ci.com/user/customizing-the-build
-
 sudo: required
+
+language: generic
+
+dist: trusty
+
+os: linux
 
 services:
   - docker
