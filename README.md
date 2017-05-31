@@ -1,5 +1,7 @@
 # Docker Web Stack
 
+[![Build Status](https://travis-ci.org/jpcaparas/docker-webapp.svg?branch=master)](https://travis-ci.org/jpcaparas/docker-webapp)
+
 # Overview
 
 Docker Compose makes it easy to interconnect various Docker images. What better way to showcase its features than by
