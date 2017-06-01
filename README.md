@@ -20,7 +20,7 @@ A `docker-compose`-powered stack to get your PHP project running in no time.
 # Requirements
 
 - `Docker` v17.03.1-ce or higher
-- `docker-compose` v1.11.2 or higher
+- `docker-compose` v1.12 or higher
 
 
 # How-to (simple)
@@ -92,7 +92,21 @@ and start the stack again.
 
 ## Gotchas
 
-- Ensure that the host machine ports `8080` (web server) and `3306` (database) are open on your host machine.
+Ensure that the host machine ports `8080` (web server) and `3306` (database) are open on your host machine.
+
+---
+
+Your version of Docker for Mac might ship with v1.11 (an older release) of Docker Compose. You need to upgrade
+to at least v1.12 in order to make this stack work.
+
+For Linux/macOS users, you can run:
+
+        curl -L https://github.com/docker/compose/releases/download/1.12.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+        chmod +x /usr/local/bin/docker-compose
+
+To check that you are using v1.12 or higher, run:
+
+        docker-compose --version
 
 
 # Warranties

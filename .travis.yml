@@ -13,11 +13,21 @@ before_install:
   # update packages
   - sudo apt-get update
 
-  # emit docker version
+  # allow write access to /usr/local/bin
+  - sudo chown -R $(whoami) /usr/local/bin
+
+  # emit current docker-compose version
   - docker-compose --version
 
-  # emit config
+  # emit current docker-compose config
   - docker-compose config
+
+  # use specific docker-compose version
+  - curl -L https://github.com/docker/compose/releases/download/1.12.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+  - chmod +x /usr/local/bin/docker-compose
+
+  # emit new docker-compose version
+  - docker-compose --version
 
   # build and start services
   - docker-compose build --force-rm --no-cache
