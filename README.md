@@ -76,6 +76,15 @@ To install npm packages, run:
 
 # How-to (advanced)
 
+To enable the Xdebug module:
+
+1. Copy the `.env.example` to an `.env` file and:
+    1. Change the value of `XDEBUG_ON` to `true`
+    1. Change the value of `XDEBUG_REMOTE_HOST` to your host machine's IP address.
+1.  Run `docker-compose up -d --build --remove-orphans` to re-build the service.
+
+---
+
 If you want to extend the functionality of a service (e.g. php-fpm), you have to re-build it.
 
 To accomplish this, modify the Dockerfile, then run:
@@ -90,7 +99,7 @@ If you want to use a different web server port (e.g. 80), modify the port on the
 and start the stack again.
 
 
-## Gotchas
+# Gotchas
 
 Ensure that the host machine ports `8080` (web server) and `3306` (database) are open on your host machine.
 

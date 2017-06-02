@@ -11,6 +11,9 @@ services:
   php-fpm:
     build:
       context: ./services/php
+      args:
+        - "XDEBUG_ON=${XDEBUG_ON}"
+        - "XDEBUG_REMOTE_HOST=${XDEBUG_REMOTE_HOST}"
     ports:
       - 9000
     volumes_from:
