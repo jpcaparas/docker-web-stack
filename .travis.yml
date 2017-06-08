@@ -41,3 +41,6 @@ script:
 
   # install npm modules
   - docker-compose run -T --rm node yarn install
+
+notifications:
+  slack: itpinoynz:0eGHUYzUtWlarK8WNxMbNAcH
